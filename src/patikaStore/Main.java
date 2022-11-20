@@ -3,20 +3,19 @@ package patikaStore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.TreeSet;
 
 public class Main {
 
 
-    static List<Urunler_CepTelefonu> cepTelefonuList = new ArrayList<>();
-    static List<Urunler_Notebook> noteBookList = new ArrayList<>();
+    static List<Products_Phones> cepTelefonuList = new ArrayList<>();
+    static List<Products_Notebooks> noteBookList = new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
-    static int urunTuru;
+    static int productType;
 
 
 
 
-    public static void anaMenu() {  //ANA menü
+    public static void mainMenu() {  //ANA menü
 
         System.out.println("#### PatikaStore'a HOŞGELDİNİZ ####");
         System.out.println("##### ANA MENÜ #####");
@@ -30,31 +29,31 @@ public class Main {
 
 
         System.out.print("Bir Seçim Yapınız :");
-        int secilenIslem = scan.nextInt();
+        int select = scan.nextInt();
 
-        switch (secilenIslem) {  //secilen işlem
+        switch (select) {  //secilen işlem
             case 1:
-                urunListele();
-                anaMenu();
+                listing();
+                mainMenu();
                 break;
 
             case 2:
-                urunAra();
-                anaMenu();
+                search();
+                mainMenu();
                 break;
 
             case 3:
-                urunEkle();
-                anaMenu();
+                addition();
+                mainMenu();
                 break;
 
             case 4:
-                urunSil();
-                anaMenu();
+                subtraction();
+                mainMenu();
                 break;
 
             case 5:
-                anaMenu();
+                mainMenu();
                 break;
 
             case 0:
@@ -67,7 +66,7 @@ public class Main {
         }   //secilen işlem sonu
     }//ANA MENU SONU
 
-    private static void urunListele() {
+    private static void listing() {
 
         System.out.println("Listelemek istediginiz urun turunu seciniz \n1. CEP TELEFONU \n2. NOTEBOOK");
         int select = scan.nextInt();
@@ -99,15 +98,15 @@ public class Main {
         }
     }
 
-    private static void urunAra() {
+    private static void search() {
         System.out.println("Aramak istediginiz urun turunu seciniz  \n1. CEP TELEFONU \n2. NOTEBOOK");
-        urunTuru = scan.nextInt();
-        System.out.println("##### " + urunTuru + "  ARAMA SAYFASI ##### ");
+        productType = scan.nextInt();
+        System.out.println("##### " + productType + "  ARAMA SAYFASI ##### ");
         System.out.print("Aramak istediginiz urunun markasini girin : \nApple  \nAsus \nCasper \nHP \nHuawei \nLenova \nMonster \nSamsung \nXiomi");
         String arananMarka = scan.next().toUpperCase();
         boolean varMi = false;
 
-        if (urunTuru == 1) {
+        if (productType == 1) {
             for (int i = 0; i < cepTelefonuList.size(); i++) {
                 if (arananMarka.equals(cepTelefonuList.get(i).getBrand())) {
                     System.out.println(cepTelefonuList.get(i));
@@ -127,15 +126,15 @@ public class Main {
         // urun arama method sonu
     }
 
-    private static void urunEkle() {
+    private static void addition() {
 
         System.out.println("##########################");
         System.out.println("###### URUN EKLEME ######");
         System.out.println("##########################");
         System.out.println("Eklemek istediginiz urun turunu seciniz  \n1. CEP TELEFONU \n2. NOTEBOOK");
-        urunTuru = scan.nextInt();
+        productType = scan.nextInt();
 
-        if (urunTuru == 1) {
+        if (productType == 1) {
 
             scan.nextLine();
             System.out.print("Urunun adı : ");
@@ -162,7 +161,7 @@ public class Main {
             System.out.print("Urun rengi :");
             String colour = scan.next();
 
-            Urunler_CepTelefonu cepTelefonu = new Urunler_CepTelefonu(productName, productId, brand, productPrice, discount, stock, memoryInfo, screensize,
+            Products_Phones cepTelefonu = new Products_Phones(productName, productId, brand, productPrice, discount, stock, memoryInfo, screensize,
                     batteryPower, ram, colour);
             cepTelefonuList.add(cepTelefonu);
 
@@ -189,24 +188,24 @@ public class Main {
             System.out.println("Ram : ");
             String ram = scan.nextLine();
 
-            Urunler_Notebook notebook = new Urunler_Notebook(productName, productId, brand, productPrice, discount, stock, memory, screenSize, ram);
+            Products_Notebooks notebook = new Products_Notebooks(productName, productId, brand, productPrice, discount, stock, memory, screenSize, ram);
             noteBookList.add(notebook);
         }
     } // urun ekleme method sonu
 
-    private static void urunSil() {
+    private static void subtraction() {
 
-        System.out.println("##### " + urunTuru + "URUN SILME ##### ");
+        System.out.println("##### " + productType + "URUN SILME ##### ");
         scan.nextLine();
         System.out.println("Silmek istediginiz urun turunu seciniz  \n1. CEP TELEFONU \n2. NOTEBOOK");
-        urunTuru = scan.nextInt();
+        productType = scan.nextInt();
         System.out.println("##########################");
         System.out.print("Silmek istediginiz urunun ıd numarasini giriniz:");
         String urunId = scan.next();
         boolean varMi = false;
 
 
-        if (urunTuru == 1) {
+        if (productType == 1) {
             for (int i = 0; i < cepTelefonuList.size(); i++) {
                 if (urunId.equals(cepTelefonuList.get(i).getProductId())) {
 

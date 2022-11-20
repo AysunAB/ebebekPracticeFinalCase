@@ -1,6 +1,6 @@
 package patikaStore;
 
-public class Urunler_Notebook {
+public class Products_Notebooks {
 
     private String productName;
     private String productId;
@@ -11,10 +11,10 @@ public class Urunler_Notebook {
     private String memory;
     private String screenSize;
     private String ram;
-    static Urunler_Notebook notebookList;
+    static Products_Notebooks notebookList;
 
 
-    public Urunler_Notebook(String productName, String productId, String brand, int productPrice, double discount, int stock, String memory, String screenSize, String ram) {
+    public Products_Notebooks(String productName, String productId, String brand, int productPrice, double discount, int stock, String memory, String screenSize, String ram) {
         this.productName = productName;
         this.productId = productId;
         this.brand = brand;
@@ -26,7 +26,7 @@ public class Urunler_Notebook {
         this.ram = ram;
     }
 
-    public Urunler_Notebook() {
+    public Products_Notebooks() {
     }
 
     public String getProductName() {

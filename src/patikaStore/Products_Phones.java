@@ -1,6 +1,6 @@
 package patikaStore;
 
-public class Urunler_CepTelefonu {
+public class Products_Phones {
 
    private String productName;
    private String productId;
@@ -14,8 +14,8 @@ public class Urunler_CepTelefonu {
    private String ram;
    private String colour;
 
-    public Urunler_CepTelefonu(String productName, String productId, String brand, int productPrice, double discount, int stock,
-                               String memoryInfo, String screenSize, int batteryPower, String ram, String colour) {
+    public Products_Phones(String productName, String productId, String brand, int productPrice, double discount, int stock,
+                           String memoryInfo, String screenSize, int batteryPower, String ram, String colour) {
 
         this.productName = productName;
         this.productId = productId;
