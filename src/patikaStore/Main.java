@@ -15,6 +15,8 @@ public class Main {
 
 
 
+
+
     public static void mainMenu() {  //ANA menü
 
         System.out.println("#### PatikaStore'a HOŞGELDİNİZ ####");
@@ -78,26 +80,51 @@ public class Main {
             System.out.println("## TUM TELEFONLAR ##");
             System.out.println("#############################");
 
-            for (int i = 0; i < cepTelefonuList.size(); i++) {
+            System.out.println("\nNotebook Listesi\n");
+            System.out.println("---------------------------------------------------------------------------------------------------------\n");
+            System.out.println(
+                    "| ID     | Product Name         | Price           | Brand     | Memory   | Screen Size     | RAM     |");
+            System.out.println("---------------------------------------------------------------------------------------------------------\n");
+            for (int i = 0; i < noteBookList.size(); i++) {
 
-                System.out.println(cepTelefonuList.get(i));
-                System.out.println("...........................");
+
+                System.out.printf("| %-3s | %-20s| %-14s TL | %-10s| %-10s| %-14s | %-8s |\n",
+
+                        noteBookList.get(i).getProductId(),
+                        noteBookList.get(i).getProductName(),
+                        noteBookList.get(i).getProductPrice(),
+                        noteBookList.get(i).getBrand(),
+                        noteBookList.get(i).getMemory(),
+                        noteBookList.get(i).getScreenSize(),
+                        noteBookList.get(i).getRam());
             }
         } else {
 
-            System.out.println("############################");
-            System.out.println("## TUM NOTEBOOKLAR##");
-            System.out.println("#############################");
+            System.out.println("\nNotebook Listesi\n");
+            System.out.println("---------------------------------------------------------------------------------------------------------\n");
+            System.out.println(
+                    "| ID     | Product Name         | Price           | Brand     | Memory   | Screen Size     | RAM     |");
+            System.out.println("---------------------------------------------------------------------------------------------------------\n");
             for (int i = 0; i < noteBookList.size(); i++) {
 
-                System.out.println(noteBookList.get(i));
-                System.out.println("...........................");
+
+                System.out.printf("| %-3s | %-20s| %-14s TL | %-10s| %-10s| %-14s | %-8s |\n",
+
+                        noteBookList.get(i).getProductId(),
+                        noteBookList.get(i).getProductName(),
+                        noteBookList.get(i).getProductPrice(),
+                        noteBookList.get(i).getBrand(),
+                        noteBookList.get(i).getMemory(),
+                        noteBookList.get(i).getScreenSize(),
+                        noteBookList.get(i).getRam());
+
+
 
 
             }
         }
-    }
 
+    }
     private static void search() {
         System.out.println("Aramak istediginiz urun turunu seciniz  \n1. CEP TELEFONU \n2. NOTEBOOK");
         productType = scan.nextInt();

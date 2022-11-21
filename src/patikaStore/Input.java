@@ -39,7 +39,7 @@ static void stoktakiUrunler(){
     noteBookList.add(notebook5);
     Products_Notebooks notebook6=new Products_Notebooks("Asus X515ea","116789", "ASUS", 18990, 0.10, 6,"512 SSD", "14 Inc", "8 GB");
     noteBookList.add(notebook6);
-    Products_Notebooks notebook7=new Products_Notebooks("6G0B7EA","14555", "HP", 15990, 0.10, 4,"512 SSD", "14 Inc", "8 GB");
+    Products_Notebooks notebook7=new Products_Notebooks("6G0B7EA","145555", "HP", 15990, 0.10, 4,"512 SSD", "14 Inc", "8 GB");
     noteBookList.add(notebook7);
     Products_Notebooks notebook8=new Products_Notebooks("Redmibook Pro 15","109001", "XIOMI", 17340, 0.10, 5,"512 SSD", "14 Inc", "8 GB");
     noteBookList.add(notebook8);

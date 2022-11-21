@@ -122,16 +122,16 @@ public class Products_Phones {
     public String toString() {
         return
                 "productName=" + productName +
-                "productId=" + productId +
-                "brand=" + brand +
-                "productPrice=" + productPrice +
-                "discount=" + discount +
-                "stock=" + stock +
-                "memoryInfo=" + memoryInfo  +
-                "screenSize=" + screenSize +
-                "batteryPower=" + batteryPower +
-                "ram=" + ram  +
-                "colour='" + colour;
+                "\nproductId=" + productId +
+                "\nbrand=" + brand +
+                "\nproductPrice=" + productPrice +
+                "\ndiscount=" + discount +
+                "\nstock=" + stock +
+                "\nmemoryInfo=" + memoryInfo  +
+                "\nscreenSize=" + screenSize +
+                "\nbatteryPower=" + batteryPower +
+                "\nram=" + ram  +
+                "\ncolour='" + colour;
     }
 }
 

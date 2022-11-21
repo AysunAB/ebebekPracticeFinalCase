@@ -11,7 +11,7 @@ public class Products_Notebooks {
     private String memory;
     private String screenSize;
     private String ram;
-    static Products_Notebooks notebookList;
+
 
 
     public Products_Notebooks(String productName, String productId, String brand, int productPrice, double discount, int stock, String memory, String screenSize, String ram) {
@@ -106,14 +106,15 @@ public class Products_Notebooks {
 
 
         return "productName=" + productName +
-                "productId=" + productId +
-                "brand=" + brand +
-                "productPrice=" + productPrice +
-                "discount=" + discount +
-                "stock=" + stock +
-                "memory" + memory +
-                "screenSize=" + screenSize +
-                "ram=" + ram;
+                "\nproductId=" + productId +
+                "\nbrand=" + brand +
+                "\nproductPrice=" + productPrice +
+                "\ndiscount=" + discount +
+                "\nstock=" + stock +
+                "\nmemory" + memory +
+                "\nscreenSize=" + screenSize +
+                "\nram=" + ram;
+
 
     }
 }
